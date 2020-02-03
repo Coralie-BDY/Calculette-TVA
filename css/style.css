@@ -1,0 +1,688 @@
+html, body, div, span, applet, object, iframe, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, sup, tt, var, b, u, center, dl, dt, dd, ol, ul, li, fieldset, form, label,legend,  caption, tbody, tfoot, thead, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video{ /* reset css a reprendre */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* @font-face {
+    font-family: 'folks-lightregular';
+    src: url('Folks-Light-webfont.eot');
+    src: url('Folks-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Folks-Light-webfont.woff') format('woff'),
+         url('Folks-Light-webfont.ttf') format('truetype'),
+         url('Folks-Light-webfont.svg#folks-lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+} */
+
+body{
+font-family: 'folks-lightregular';
+font-size: 15px; 
+line-height: 20px;
+}
+					
+p{ line-height: 24px; }
+/* ul{ margin-left: 30px; } */
+header{
+background: #55a5dc;
+/* padding: 10px 0 5px 5px; */
+padding: 10px 0 23px 0;
+/* border-bottom: 2px solid #fff; */
+}
+.logo{
+font-size: 15px;
+font-weight: bold;
+letter-spacing: 1px;
+display: inline;
+margin: 3px 0 0 5px;
+float: left;
+}
+nav  a{ text-decoration: none; color: #000; }
+section  a, #footer2  a{ text-decoration: underline; color: #55a5dc; }
+#footer2 { padding: 10px 0 10px 0; font-size: 13px; }
+section  a:hover, #footer2  a:hover{ text-decoration: none; }
+.logo  a{
+display: inline-block;
+padding: 5px 20px;
+font-size: 17px;
+ text-decoration: underline;
+color: #000;
+}
+.menuDroit {float: right; margin: 3px 0 0 5px; }
+.menuDroit a{
+padding: 5px 10px 3px 10px; 
+color: #000;
+height: 26px;
+font-size: 17px;
+/* background: red; */
+}
+.menuDroit a:hover {
+background: #fff;
+}
+.activeMenu  a:hover{
+background: #55a5dc;
+}
+.italic{ font-style: italic; }
+.floatRight{ float: right; }
+.floatLeft{ float: left; }
+.visible{ background: #000; color: #fff; padding: 5px; }
+#differenceAnnuel{ font-size: 10px; }
+.conteneur{
+max-width: 1170px;
+margin: 0 auto;
+/* border: 1px solid red; */
+}
+#gauche{ width: 65%; float: left; margin-right: 5%; }
+#droite{ width: 30%; float: left; /*background: red;*/ }
+.clear{ clear: both; }
+.erreur{ background: red; padding: 5px; font-size: 15px; color: #fff; }
+
+.pub{ background: #f2f2f2; min-height: 100px; margin-bottom: 30px; padding: 5px; }
+section{ padding: 50px 5px 50px 5px;}
+section#actualites{ padding: 40px 5px 50px 5px;}
+section#commentaire{ padding: 40px 5px 50px 5px;}
+table, td, th{ border-collapse: collapse; text-align: center;}
+.bordureBasGrise{  border-bottom: 1px solid #dedede; }
+.bordureHautGrise{  border-top: 1px solid #dedede; }
+.lead{  padding: 7px 0 5px 0; text-align: center; font-size: 25px; margin: 20px 0 30px 0; color: #fff; letter-spacing: 2px; }
+#index h1, #index h2, #index h3, #index h4, #impots h1, #impots h2, #impots h3, #impots h4, #tva h1, #tva h2, #tva h3, #tva h4, #societe h1, #societe h2, #societe h3, #societe h4{ text-align: center; border-bottom: 1px solid #55a5dc; }
+h1{ text-align: center; font-size: 25px; margin: 0; color: #55a5dc ; padding: 30px 0 5px; margin-bottom: 15px; }
+h2{  font-size: 25px; margin: 0; color: #55a5dc ; padding: 30px 0 5px;margin-bottom: 15px; }
+h3{ font-size: 20px; margin: 0; color: #55a5dc ; padding: 30px 0 5px;margin-bottom: 15px; }
+#index h4{ font-size: 20px; margin: 0; color: #55a5dc ; padding: 30px 0 5px;margin-bottom: 15px; }
+h4{ font-size: 15px; margin: 0 0 6px 0; }
+hr{	margin: 2em 0 2em 0;border: 0;	border-top: 1px solid #ddd; margin: 7px 0; }
+.floatRight{ float: right; }
+thead{}
+td{ text-align: center; }
+.calcul-salaire-brut-net  td{ padding: 12px; }
+.calcul-salaire-brut-net, .calcul-societe{
+margin: 0 0 30px 0;
+}
+/* .calcul-salaire-brut-net-options{ margin-top: 40px; } */
+.calcul-salaire-brut-net-options td{ padding: 5px; }
+#totalSalaire{  margin-top: 15px; font-size: 16px; text-align: center;  margin: 0 auto;   max-width: 900px; line-height: 30px; } /* phrase générée */
+.totalSalaire{} 
+.no-padding{ padding: 0; }
+
+input{ background: #fff; color: #000; }
+.input-calcul, .input-calcul2{
+letter-spacing: 2px;
+text-align: center;
+font-size: 14px;
+padding: 3px 3px 3px 20px;
+width: 75%;
+/* border: 0; */
+border-radius: 5px;
+border: 1px solid #ccc;
+box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.input-calcul:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px #fff inset, 0 0 8px #fff;
+    outline: 0 none;
+}
+.ligne-vide td{ padding: 0px; }
+
+/* .saisie:after{ content: "€"; } */
+
+
+#index  .heures  input{ width: 15%; font-size: 14px; padding: 2px 2px 2px 20px; }
+#index  .mois  input{ width: 15%; font-size: 14px; padding: 2px 2px 2px 20px; }
+#index  .charges  input{ width: 15%; font-size: 14px; padding: 2px 2px 2px 20px; }
+#index  .annuel input{ font-size: 14px; padding: 2px 2px 2px 2px; background: #aaaaaa; border: 0; border-radius: 5px; }
+#index  .annuel input:hover{ cursor: pointer; background: #000;  }
+
+.calculatrice-brut-net, .calcul-societe-contenu {padding: 10px 10px 0 10px; font-size: 15px; }
+.saisie:hover label, .saisie:hover input { cursor: pointer; background: #303030; color: #fff; }
+.saisie-active { cursor: pointer; background: #f1f1f1; color: #000; }
+.calculatrice-brut-net  span, .calcul-societe-contenu  span{ font-size: 11px; }
+ .calcul-societe-contenu  .table{ background: #fff; }
+
+
+.calcul-salaire-brut-net-options  button{
+background: #f2f2f2;
+width: 70%;
+/* padding: 10px 3px; */
+/* border-radius: 5px; */
+}
+.calcul-salaire-brut-net-options  button  #annuel { border:0; }
+.calcul-salaire-brut-net-options  button{ position: relative; text-align: left; border: 0 none; padding: 2px 5px; border-radius: 5px;  }
+.calcul-salaire-brut-net-options  button  input{ 
+position: absolute;  
+ display: block;
+    min-height: 100%;
+    outline: medium none;
+    top: 0;
+	margin-left: 30px;
+	padding: 0;
+	border:0 none !important;
+	background: 0 none !important;
+	/* font-weight: bold; */
+}
+#saisie-taux{ width: 70%; min-width: 110px; }
+#index  #charges{ margin-left: 41px; }
+#saisie-mois{ width: 58%; min-width: 85px; }
+#mois{ margin-left: 30px; }
+#saisie-heures{ width: 65%; min-width: 100px;  }
+#heures{ margin-left: 35px; }
+.calcul-salaire-brut-net-options  button:hover{ cursor: pointer;  background: #303030; color: #fff; }
+.calcul-salaire-brut-net-options  button:hover  input{ color: #fff; } 
+#annuel{ border:0 none !important; padding: 2px 5px; border-radius: 5px; background: #f2f2f2;  }
+#annuel:hover{ cursor: pointer;  background: #303030; color: #fff; }
+#cadre{ margin: 0 0 0 30px; padding: 2px; }
+
+.reseaux-sociaux{ margin: 0 0 30px 0; /*background: red;*/ padding: 5px; }
+
+.social ul.social-buttons {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.social ul.social-buttons {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+	text-align: center;
+}
+.social ul.social-buttons li{
+	display: inline;
+}
+
+.social ul.social-buttons li a {
+    background-color: #888;
+    color: #fff !important;
+    display: block;
+    font-size: 14px;
+	padding: 5px 0;
+    text-align: center;
+    text-decoration: none !important;
+    transition: background-color 0.2s ease 0s;
+    width: auto;
+    word-break: normal;
+	width: 18.3%;
+	float: left;
+	margin-right: 2%;
+}
+#index  .social ul.social-buttons li a { padding: 0; }
+
+#impots  .table th, #impots  .table td{ padding: 12px 0; }
+
+.bareme th, .bareme td { padding: 5px; border-color: gray; }
+.bareme{border-color: gray; } 
+
+.social ul.social-buttons li a.facebook, .social-single a.facebook {  background-color: #3b5998;}
+.social ul.social-buttons li a.facebook:hover, .social-single a.facebook:hover {  opacity: 0.8; }
+.social ul.social-buttons li a.twitter, .social-single a.twitter {   background-color: #00aced;}
+.social ul.social-buttons li a.twitter:hover, .social-single a.twitter:hover {  opacity: 0.8; }
+.social ul.social-buttons li a.googleplus, .social-single a.googleplus {   background-color: #dd4b39;}
+.social ul.social-buttons li a.googleplus:hover, .social-single a.googleplus:hover {  opacity: 0.8; }
+.social ul.social-buttons li a.linkedin, .social-single a.linkedin {   background-color: #007bb6;}
+.social ul.social-buttons li a.linkedin:hover, .social-single a.linkedin:hover {  opacity: 0.8; }
+.social ul.social-buttons li a.viadeo, .social-single a.viadeo {    background-color: #f07355;	margin-right: 0% !important;}
+.social ul.social-buttons li a.viadeo:hover, .social-single a.viadeo:hover {  opacity: 0.8; }
+
+
+footer{ padding: 50px 0 20px; background: #55a5dc; }
+.commentaires{ float: left; width: 30%; min-height: 100px;margin: 0  4% 30px 0;  }
+.motcles{ float: right; width: 30%; }
+.plandusite  a:hover{ text-decoration: none; }
+.actualites  a:hover{ text-decoration: none; color:#55a5dc; }
+
+.newsletter{ float: left; width: 30%; min-height: 100px; margin: 0 4% 30px 0;  }
+.newsletter-contenu{ padding: 5px 10px 10px 10px; min-height: 110px; }
+.newsletter-titre, .motcles-titre{
+padding: 3px;
+color: #000;
+font-weight: bold; 
+}
+.input-contact, .input-newsletter, .input-commentaire{ 
+	background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 4px;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 28px;
+    padding: 0 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 60%;
+	float: left;
+	margin-right: 5%;
+	width: 80%;
+}
+.newsletter .input-newsletter{ width: 80%; }
+.input-contact{ float: none !important; }
+textarea.input-contact{ padding: 5px; width: 82.3%; }
+.input-commentaire:focus, .input-newsletter:focus {
+    border-color: #66afe9;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0 none;
+}
+.input-commentaire{ float: none; resize: none; width: 81.3%; min-height: 100px; padding: 5px; }
+.blanc{ color: white; }
+.noir{ color: black; text-align: center; font-size: 15px; }
+
+.contact-gauche, .contact-droite{ width: 45%; float: left; /* background: yellow; */ }
+.contact-gauche{ margin-right: 10%; }
+
+
+.validation{
+ background-color: #5cb85c;
+ border-color: #4cae4c;
+ color: #fff;
+ border: 0;
+ padding: 5px;
+ border-radius: 5px;
+}
+.validation:hover{
+cursor: pointer;
+ background-color: #449d44;
+}
+.succes{
+ background-color: #5cb85c;
+ padding: 5px;
+ color: #fff;
+}
+.annule{
+ background-color: #ff0000;
+ padding: 5px;
+ color: #fff;
+}
+
+.timeline {
+    margin-bottom: 30px;
+    margin-top: 4px;
+    padding: 21px 0 10px;
+    position: relative;
+}
+
+.timeline .line::before, .timeline .line::after {
+    background: currentcolor none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 12px;
+    left: -4px;
+    position: absolute;
+    width: 12px;
+}
+.timeline .line::before {
+    top: -4px;
+}
+*::after, *::before {
+    box-sizing: border-box;
+}
+.timeline .line::before, .timeline .line::after {
+    background: currentcolor none repeat scroll 0 0;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 12px;
+    left: -4px;
+    position: absolute;
+    width: 12px;
+}
+.timeline .line::after {
+    bottom: -4px;
+}
+.timeline .line {
+    background: currentcolor none repeat scroll 0 0;
+    bottom: 0;
+    display: block;
+    margin-left: 30px;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+.text-muted {
+    color: #777;
+}
+.timeline .separator {
+    border-top: 1px solid currentcolor;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-left: 30px;
+    padding: 5px 5px 5px 40px;
+}
+
+.timeline .panel::before {
+    -moz-border-bottom-colors: inherit;
+    -moz-border-left-colors: inherit;
+    -moz-border-right-colors: inherit;
+    -moz-border-top-colors: inherit;
+    border-bottom-color: transparent;
+    border-image: inherit;
+    border-left-color: transparent;
+    border-right-color: inherit;
+    border-style: inherit;
+    border-top-color: transparent;
+    border-width: 12px;
+    content: "";
+    display: block;
+    height: 0;
+    left: -24px;
+    position: absolute;
+    top: 3px;
+    width: 0;
+}
+.timeline .panel .panel-heading.icon {
+    border-radius: 50%;
+    display: block;
+    float: left;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 30px;
+}
+.panel-primary > .panel-heading {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #fff;
+	padding: 5px;	
+}
+
+.panel-title {
+    color: inherit;
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.panel-footer {
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+
+.timeline {
+    position: relative;
+    padding: 21px 0px 10px;
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+.timeline .line {
+    position: absolute;
+    width: 4px;
+    display: block;
+    background: currentColor;
+    top: 0px;
+    bottom: 0px;
+    margin-left: 30px;
+}
+
+.timeline .separator {
+    border-top: 1px solid currentColor;
+    padding: 5px;
+    padding-left: 40px;
+    font-style: italic;
+    font-size: .9em;
+    margin-left: 30px;
+}
+
+.timeline .line::before { top: -4px; }
+.timeline .line::after { bottom: -4px; }
+.timeline .line::before,
+.timeline .line::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    width: 12px;
+    height: 12px;
+    display: block;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.timeline .panel {
+    position: relative;
+    margin: 10px 0px 21px 70px;
+    clear: both;
+}
+
+.panel{
+border: 1px solid #337ab7;
+}
+
+.timeline .panel .panel-heading.icon * { font-size: 15px; vertical-align: middle; }
+.timeline .panel .panel-heading.icon {
+    left: -55px;
+    height: 21px;
+	margin-top: 3px;
+	padding-top: 2px;
+    /* position: absolute; */
+    /* display: block; */
+    /* width: 40px; */
+    /* padding: 0px; */
+    /* border-radius: 50%; */
+    /* text-align: center; */
+    /* float: left; */
+}
+.panel-heading  a{
+	color: #fff;
+}
+
+.timeline .panel-outline {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+}
+ .panel-body {
+    padding: 10px;
+}
+
+.timeline .panel-outline .panel-heading:not(.icon),
+.timeline .panel-outline .panel-footer {
+    display: none;
+}
+
+.conversation{ margin: 0 0 0 29px; font-size: 15px; background: transparent; color: #303030; }
+.contact{ margin-left: 29px; }
+
+.mobile{ visibility: hidden; }
+.table { width: 100%; }
+
+#annuel{  height: 23px; }
+#saisie-taux{  height: 23px; }
+#saisie-mois{  height: 23px; }
+#saisie-heures{  height: 23px; }
+#saisie-cadre{ /*width: 50%;*/ float: left; border-radius: 0; border-top-left-radius: 5px;  border-bottom-left-radius: 5px; height: 23px; }
+.caseCadreHover:hover    .englobeCaseCadre{ background: #303030 !important; color: #fff; }
+.caseCadreHover:hover    #saisie-cadre{ background: #303030 !important; color: #fff; }
+#cadre{ margin: 0; }
+.englobeCaseCadre{ display: inline; background: #f2f2f2; width: 15%; float: left; border-top-right-radius: 10px;  border-bottom-right-radius: 10px; height: 20px; padding: 3px 5px 0 0;  }
+.messageIntro{ font-size: 20px; text-align: center; margin: 50px 0 30px 0; }
+
+.borderTopLeft{ width: 50px; height: 30px; border-top: 1px solid; border-left: 1px solid; float: left; }
+.borderTopRight{ width: 50px; height: 30px; border-top: 1px solid; border-right: 1px solid; float: right; }
+.borderBottomLeft{ width: 50px; height: 30px; border-bottom: 1px solid; border-left: 1px solid; float: left; }
+.borderBottomRight{ width: 50px; height: 30px; border-bottom: 1px solid; border-right: 1px solid; float: right; }
+
+.dernieres-actualites  { line-height: 30px; }
+.dernieres-actualites   a{ color: white; }
+.dernieres-actualites   a:hover{ text-decoration: underline; }
+
+.texte  p, .texte  ul li{ font-family: sans-serif; color: #181818;  line-height: 30px; text-align: justify; }
+.texte  ul li{ margin-left: 20px; }
+#index ul li , #index ol li{  line-height: 30px; }
+ol li{ margin-left: 20px; font-weight: bold; }
+ol li span{font-weight: normal; }
+
+.textePartage{
+float: left;
+line-height: 39px;
+margin-right: 3%;
+}
+label{
+display: inline-block;
+margin-bottom: 5px;
+}
+
+select#situation, select#enfants{ padding: 5px; }
+
+.verticalAlignMiddle{ vertical-align:middle; }
+.textAlignCenter{ text-align: center; }
+.textAlignLeft{ text-align: left; }
+.cellpadding5{ padding: 5; }
+.pourcent18{ width: 18%; }
+.pourcent20{ width: 20%; }
+.pourcent40{ width: 40%; }
+.pourcent10{ width: 10%; }
+.width324{ width: 324px; }
+.width288{ width: 288px; }
+.height60{ height: 60px; }
+.pourcent100{ width: 100% !important; }
+
+/************************************************************************************************************************************************************************************/
+/*IMPOTS*/
+	#totalImpots{ font-size: 16px; text-align: center; margin: 25px auto 0 auto; max-width: 900px; line-height: 30px; }
+	#totalImpots  table tr td{ padding: 2px; }
+	#impots  .totalImpots{ background: #f2f2f2; border-radius: 10px; }
+	#impots  .contenu-impots{ padding: 15px; }
+	#impots  h5{ background: #303030; border-radius: 10px 10px 0 0; padding: 7px 0 5px 0; text-align: center; font-size: 14px; margin: 0; color: #fff; border: 1px solid #111; }
+/************************************************************************************************************************************************************************************/
+/* TVA */
+	#tva .appliqueTauxTVA input{ width: 15%;  border: 0; border-radius: 5px; }
+	#tva .appliqueTauxTVA input:hover{ cursor: pointer; background: #303030; color: #fff; }
+	#tva .calculatrice-tva{  border-radius: 10px;  }
+	#tva span.addition, #tva span.egal { font-size: 30px; }
+	#tauxTVA{ max-width: 20%;}
+/************************************************************************************************************************************************************************************/
+/* SOCIETE */
+	#societe  #gauche{ width: 100%; margin: 0; }
+	#societe  #droite{ width: 100%; margin: 0; }
+	#societe  .vert{ color: green; font-weight: bold; font-size: 13px; }
+	#societe  .rouge{ color: red; font-weight: bold; font-size: 13px; }
+	.fondRouge{ color: white; background: red; font-weight: bold; font-size: 12px; padding: 5px; margin: 0 10px;   }
+	/* #societe  #avertissement{  height: 50px;  } */
+	section#societe{ padding: 15px 5px 5px 5px;}
+	#societe  th, #societe  td{ border-top: 1px solid #dedede;  border-right: 1px solid #dedede;  /*border-left: 1px solid #dedede;*/ }
+	#societe  .bordureBottom{ border-bottom: 1px solid #dedede; }
+	#societe  .pasDeBordure{ border: 0 none; border-top: 1px solid #dedede; }
+	#societe   .rouge, #societe   .vert { font-size: 17px; }
+	#societe   .calcul-societe-contenu  .pasDeBordure{ background: #55a5dc; line-height: 8px; }
+	#societe  .calculatrice-brut-net{ padding: 10px 5px !important;}
+/************************************************************************************************************************************************************************************/
+/* MENU */
+.menuDroit  nav  ul li {
+  padding: 0 10px;
+  list-style: none;
+}
+.menuDroit  nav  .cache-toi {
+  display: none;
+}
+.menuDroit  nav  .montre-toi {
+  display: block;
+  /* margin-top: 35px; */
+}
+.menuDroit  nav  .montre-toi  a{ color: #000; }
+.menuDroit  nav  .deroulant{ /* background-color: #e7e7e7; */ /* color: #555; */ /* text-decoration: none; */ }
+.menuDroit  nav  .caret {
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px dashed black;
+    display: inline-block;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    width: 0;
+}
+.menuDroit  nav  .activeMenu{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    font-size: 13px;
+    padding: 5px 0;
+	position: absolute;
+	z-index: 1000;
+	background: #fff;
+}
+/* .menuDroit  nav  .activeMenu  li{ padding: 3px 0 3px 0 !important;} */
+.menuDroit  nav  .activeMenu  li  a{
+float: none !important;
+display: block;
+text-align: center;
+height: inherit !important;
+padding: 3px 0 3px 0 ;
+}
+.menuDroit  nav  .activeMenu  li  a:hover{
+color: #fff;
+}
+.textePasImportant{ font-size: 13px !important; } 
+
+.dernieres-actualites   li  a{ text-decoration: none; }
+.dernieres-actualites   li  a:hover{ text-decoration: underline; }
+.dernieres-actualites   li  { list-style : none; }
+/************************************************************************************************************************************************************************************/
+/************* PARTIE RESPONSIVE *****************/
+@media screen and (max-width:1200px) {
+/* body:before{ background: #ff0000; content: " < 1200px "; position: absolute; color: #fff; padding: 2px; font-size: 12px; } */
+.textePasImportant{ display: none; } 
+}
+@media screen and (max-width:992px) {
+/* body:before{ background: #ff0000; content: " < 992px "; position: absolute; color: #fff; padding: 2px; font-size: 12px; } */
+.pas-important{ display: none; }
+.appliqueTauxTVA input{ width: 15%; }
+}
+@media screen and (max-width:768px) {
+/* body:before{ background: #ff0000; content: " < 768px "; position: absolute; color: #fff; padding: 2px; font-size: 12px; } */
+#gauche{ width: 100%; margin: 0; }
+#droite{ width: 100%; margin: 0; }
+.logo{ text-align: center; width: 99%; margin: 3px;}
+.logo  a{ text-align: center; width: 99%;  padding: 0; }
+.menuDroit{  display: block; text-align: center; float: none !important; }
+#societe  .fondRouge{ display: block; padding: 2px; }
+.menuDroit  nav{ padding-top: 20px; display: inline-block; }
+/* .menuDroit  nav  .montre-toi { margin-top: 70px; } */
+.englobeCaseCadre{height: 36px; line-height: 39px;  }
+#saisie-cadre{ height: 39px; }
+}
+@media screen and (max-width:605px) {
+/* body:before{ background: #ff0000; content: " < 605px "; position: absolute; color: #fff; padding: 2px; font-size: 12px; } */
+#tva .tauxDeTva  input{ width: 40%; }
+body{ font-size: 12px !important; }
+.table2  td{ display : block; width: 100%; }
+#annuel{ width: 100%; }
+#saisie-taux{ width: 100%; }
+#saisie-mois{ width: 100%; }
+#saisie-heures{ width: 100%; }
+#saisie-cadre{ width: 80%; }
+#index  #charges{ margin: 0; }
+#mois{ margin: 0; }
+#cadre{ margin: 0; }
+#heures{ margin: 0; }
+.input-calcul, .input-calcul2{ font-size: 13px; }
+.mobile{ visibility: initial; }
+.appliqueTauxTVA input{ width: 25%; margin: 0 0 5px 0; }
+.commentaires{width: 100%; margin: 0; }
+.newsletter{width: 100%; margin: 0; }
+.motcles{width: 100%;}
+.englobeCaseCadre{height: 20px; line-height: 20px;  }
+#saisie-cadre{ height: 23px; }
+.menuDroit  a{ font-size: 16px; }
+/* .menuDroit nav .activeMenu { width: 120px; } */
+.pasImportant{ display: none; }
+}
+
+@media screen and (max-width:400px) {
+/* body:before{ background: #ff0000; content: " < 400px "; position: absolute; color: #fff; padding: 2px; font-size: 12px; } */
+#societe  .fondRouge{ display: block; padding: 2px; }
+.logo{ float: none !important; }
+.calcul-salaire-brut-net{ margin-top: 50px ; }
+.moinsImportant{ display : none; }
+.menuDroit{ float: none !important; }
+.menuDroit  a{ display: block; }
+}
